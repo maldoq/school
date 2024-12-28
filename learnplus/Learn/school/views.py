@@ -27,27 +27,6 @@ def login(request):
         }
         return render(request, 'pages/guest-login.html', datas)
 
-def signup(request):
-    if request.user.is_authenticated:
-        try:
-            try:
-                print("1")
-                if request.user.student_user:
-                    return redirect('index_student')
-            except:
-                print("2")
-                if request.user.instructor:
-                    return redirect('dashboard')
-        except:
-            print("3")
-            return redirect("/admin/")
-    else:
-
-        datas = {
-
-        }
-        return render(request, 'pages/guest-signup.html', datas) 
-
 def forgot_password(request):
     if request.user.is_authenticated:
         try:
@@ -109,9 +88,9 @@ def islogin(request):
                 u_type = "admin"
 
             datas = {
-                'redirect' : u_type,
                 'success':True,
                 'message':'Vous êtes connectés!!!',
+                'redirect' : u_type,
             }
             return JsonResponse(datas,safe=False) # page si connect
                 

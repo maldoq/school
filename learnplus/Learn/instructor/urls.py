@@ -15,8 +15,9 @@ urlpatterns = [
     path('lesson-edit/<id>/<slug>', views.lesson_edit, name='instructor-lesson-edit'),
     path('messages/<str:classe>/', views.messages, name='instructor-messages'),
     path('profile', views.profile, name='instructor-profile'),
-    path('quiz_edit', views.quiz_edit, name='instructor-quiz-edit'),
+    path('quiz_edit/<slug:quiz_slug>', views.quiz_edit, name='instructor-quiz-edit'),
     path('quiz_add', views.quiz_add, name='instructor-quiz-add'),
+    path('quiz_post_add', views.post_quiz, name='instructor-quiz-add-post'),
     path('review_quiz', views.review_quiz, name='instructor-review-quiz'),
     path('quizzes', views.quizzes, name='instructor-quizzes'),
     
@@ -25,6 +26,7 @@ urlpatterns = [
     path('delete_chapitre',views.delete_chapitre,name='delete_chapitre') ,
     path('delete_lesson',views.delete_lesson,name='delete_lesson') ,
     path('post_lesson',views.post_lesson,name='post_lesson'),
+    path('forum/response/<int:question_id>/', views.post_response, name='post_response'),
 
      ########## post ###############
     path('update_profil', views.update_profil, name='update_profil'),

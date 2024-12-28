@@ -274,7 +274,7 @@
                             formData.append('question', this.question);
                             axios.defaults.xsrfCookieName = 'csrftoken'
                             axios.defaults.xsrfHeaderName = 'X-CSRFToken'
-                            axios.post(this.base_url + 'student/post_forum_g',
+                            axios.post(this.base_url + 'student/post_forum',
                                 formData,
                                 {
                                     headers: {

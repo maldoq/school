@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from datetime import datetime
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from school import models as school_models
 from quiz import models as quiz_models
@@ -83,30 +84,6 @@ def account_edit(request):
 #             print("3")
 #             return redirect("/admin/")
     
-
-
-
-# @login_required(login_url = 'login')
-# def carts(request):
-#     if request.user.is_authenticated:
-#         try:
-#             try:
-#                 print("1")
-#                 if request.user.student_user:
-#                     return redirect('index_student')
-#             except Exception as e:
-# print(e)
-#                 print("2")
-#                 if request.user.instructor:
-#                     datas = {
-
-#                            }
-#                 return render(request,'pages/instructor-cart.html',datas)
-#         except Exception as e:
-# print(e)
-#             print("3")
-#             return redirect("/admin/")
-   
 
 
 
@@ -481,26 +458,26 @@ def messages(request, classe):
 
 
 
-# @login_required(login_url = 'login')
-# def messages_2(request):
-#     if request.user.is_authenticated:
-#         try:
-#             try:
-#                 print("1")
-#                 if request.user.student_user:
-#                     return redirect('index_student')
-#             except Exception as e:
-#                 print(e)
-#                 print("2")
-#                 if request.user.instructor:
-#                     datas = {
+@login_required(login_url = 'login')
+def messages_2(request):
+    if request.user.is_authenticated:
+        try:
+            try:
+                print("1")
+                if request.user.student_user:
+                    return redirect('index_student')
+            except Exception as e:
+                print(e)
+                print("2")
+                if request.user.instructor:
+                    datas = {
 
-#                            }
-#                     return render(request,'pages/instructor-messages-2.html',datas)
-#         except Exception as e:
-#             print(e)
-#             print("3")
-#             return redirect("/admin/")
+                           }
+                    return render(request,'pages/instructor-messages-2.html',datas)
+        except Exception as e:
+            print(e)
+            print("3")
+            return redirect("/admin/")
 
 
 
@@ -557,26 +534,55 @@ def profile(request):
 
 
 
-@login_required(login_url = 'login')
-def quiz_edit(request):
+@login_required(login_url='login')
+def quiz_edit(request, quiz_slug):
     if request.user.is_authenticated:
         try:
-            try:
-                print("1")
-                if request.user.student_user:
-                    return redirect('index_student')
-            except Exception as e:
-                print(e)
-                print("2")
-                if request.user.instructor:
-                    datas = {
-
-                           }
-                    return render(request,'pages/instructor-quiz-edit.html',datas)
+            if request.user.student_user:
+                return redirect('index_student')
         except Exception as e:
             print(e)
-            print("3")
-            return redirect("/admin/")
+
+        if request.user.instructor:
+            # Fetch the quiz instance based on the slug
+            quiz = get_object_or_404(quiz_models.Quiz, slug=quiz_slug)
+            courses = school_models.Cours.objects.filter(status=True)
+
+            if request.method == 'POST':
+                # Handle the form submission
+                titre = request.POST.get('titre')
+                cours_id = request.POST.get('cours')
+                image = request.FILES.get('image')  # Handle the uploaded image
+                temps = request.POST.get('temps')  # Duration in minutes
+                date = request.POST.get('date')  # Date of the quiz
+
+                try:
+                    # Fetch the course instance
+                    cours = school_models.Cours.objects.get(id=cours_id)
+
+                    # Update the quiz instance
+                    quiz.titre = titre
+                    quiz.cours = cours
+                    quiz.temps = temps
+                    quiz.date = date  # Update the date
+
+                    # Handle the image if provided
+                    if image:
+                        quiz.image = image  # Update the image field
+
+                    quiz.save()  # Save the updated quiz instance
+
+                    return redirect('instructor-quizzes')  # Redirect to the quiz manager page
+                except school_models.Cours.DoesNotExist:
+                    return render(request, 'pages/instructor-quiz-edit.html', {'quiz': quiz, 'error': 'Course not found.'})
+                except Exception as e:
+                    print(e)
+                    return render(request, 'pages/instructor-quiz-edit.html', {'quiz': quiz, 'error': 'An error occurred while saving the quiz.'})
+
+            # If GET request, render the quiz edit form with existing data
+            return render(request, 'pages/instructor-quiz-edit.html', {'quiz': quiz, 'courses':courses})
+
+    return redirect("/admin/")
 
 
 
@@ -592,9 +598,10 @@ def quiz_add(request):
             except Exception as e:
                 print(e)
                 print("2")
+                courses = school_models.Cours.objects.filter(status=True)
                 if request.user.instructor:
                     datas = {
-
+                                'courses': courses,
                            }
                     return render(request,'pages/instructor-quiz-add.html',datas)
         except Exception as e:
@@ -603,29 +610,63 @@ def quiz_add(request):
             return redirect("/admin/")
 
 
+@login_required(login_url='login')
+def post_quiz(request):
+    if request.method == 'POST':
+        titre = request.POST.get('titre')
+        cours_id = request.POST.get('cours')
+        image = request.FILES.get('image')  # Handle the uploaded image
+        temps = request.POST.get('temps')  # Duration in minutes
+        date = request.POST.get('date')  # Date of the quiz
+
+        try:
+            # Fetch the course instance
+            cours = school_models.Cours.objects.get(id=cours_id)
+
+            # Create a new Quiz instance
+            quiz = quiz_models.Quiz(
+                titre=titre,
+                cours=cours,
+                date=date,  # Set the date from the form
+                temps=temps,  # Set the duration
+            )
+            quiz.save()  # Save the quiz instance
+
+            # Handle the image if needed
+            if image:
+                quiz.image = image  # Set the image field
+                quiz.save()  # Save again to update the image
+
+            return redirect('instructor-quizzes')  # Redirect to the quiz manager page
+        except school_models.Cours.DoesNotExist:
+            return render(request, 'pages/instructor-quiz-add.html', {'error': 'Course not found.'})
+        except Exception as e:
+            print(e)
+            return render(request, 'pages/instructor-quiz-add.html', {'error': 'An error occurred while saving the quiz.'})
 
 
 
-# @login_required(login_url = 'login')
-# def quiz_results(request):
-#     if request.user.is_authenticated:
-#         try:
-#             try:
-#                 print("1")
-#                 if request.user.student_user:
-#                     return redirect('index_student')
-#             except Exception as e:
-# print(e)
-#                 print("2")
-#                 if request.user.instructor:
-#                     datas = {
 
-#                            }
-#                     return render(request,'pages/instructor-quiz-results.html',datas)
-#         except Exception as e:
-# print(e)
-#             print("3")
-#             return redirect("/admin/")
+@login_required(login_url = 'login')
+def quiz_results(request):
+    if request.user.is_authenticated:
+        try:
+            try:
+                print("1")
+                if request.user.student_user:
+                    return redirect('index_student')
+            except Exception as e:
+                print(e)
+                print("2")
+                if request.user.instructor:
+                    datas = {
+
+                           }
+                    return render(request,'pages/instructor-quiz-results.html',datas)
+        except Exception as e:
+            print(e)
+            print("3")
+            return redirect("/admin/")
     
 
 
@@ -643,8 +684,9 @@ def quizzes(request):
                 print(e)
                 print("2")
                 if request.user.instructor:
+                    list_quiz = quiz_models.Quiz.objects.filter(Q(status=True) & Q(cours__chapitre__classe=request.user.instructor.classe))
                     datas = {
-
+                            "list_quiz": list_quiz,
                            }
                     return render(request,'pages/instructor-quizzes.html',datas)
         except Exception as e:
@@ -1034,3 +1076,24 @@ def post_forum(request):
         "forum": val,
         }
     return JsonResponse(data,safe=False)
+
+@login_required(login_url='login')
+def post_response(request, question_id):
+    if request.method == 'POST':
+        # Get the response text from the form
+        response_text = request.POST.get('comment')
+        
+        # Get the question instance
+        question = get_object_or_404(forum_models.Sujet, id=question_id)
+
+        # Create a new response instance
+        response = forum_models.Reponse(
+            reponse=response_text,
+            sujet=question,
+            user=request.user  # Set this based on your logic (e.g., if it's a correct answer)
+        )
+        response.save()  # Save the response to the database
+
+        return redirect('instructor-forum')  # Redirect to the forum or the specific question page
+
+    return redirect('instructor-forum')  # Redirect if the request method is not POST

@@ -44,12 +44,14 @@
                                         <img src="{{ user.instructor.photo.url }}" alt="people" class="avatar-img rounded-circle">
                                     </a>
                                     <div class="flex">
-                                        <div class="form-group">
-                                            <label for="comment" class="form-label">Avez-vous une reponse??</label>
-                                            <textarea class="form-control" name="comment" id="comment" rows="3"
-                                                placeholder="Entrer votre reponse"></textarea>
-                                        </div>
-                                        <button class="btn btn-success">Je reponds</button>
+                                        <form action="{% url 'post_response' forum.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="comment" class="form-label">Avez-vous une reponse?</label>
+                                                <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Entrer votre reponse" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Je reponds</button>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="pt-3">

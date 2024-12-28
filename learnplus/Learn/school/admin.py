@@ -41,14 +41,31 @@ class NiveauAdmin(CustomAdmin):
     ]
 
 class ClasseAdmin(CustomAdmin):
-    list_display = ('niveau','numeroClasse','status')
-    list_display_links = ['niveau',]
+    list_display = ('niveau','numeroClasse','status','filiere')
+    list_display_links = ['niveau','numeroClasse']
     search_fields = ('niveau',)
     ordering = ('niveau',)
     fieldsets = [
-                 ("info classe",{"fields":["niveau","numeroClasse"]}),
+                 ("info classe",{"fields":["niveau","numeroClasse","filiere"]}),
                  ("standard",{"fields":["status"]})
     ]
+
+
+class ClasseMatiereAdmin(CustomAdmin):
+    list_display = ('classe', 'matiere', 'status', 'date_add', 'date_update')
+    list_display_links = ['classe', 'matiere']
+    search_fields = ('classe__numeroClasse', 'matiere__nom')  # Searching by class number or matiere name
+    ordering = ('classe', 'matiere')  # Ordering by class and matiere
+    list_filter = ('status',)  # Filter by status
+
+    fieldsets = [
+        ("Classe-Matiere Info", {"fields": ["classe", "matiere", "status"]}),
+    ]
+
+    def status(self, obj):
+        return "Active" if obj.status else "Inactive"
+    status.admin_order_field = 'status'
+    status.short_description = 'Status'
 
 class ChapitreAdmin(CustomAdmin):
     list_display = ('matiere','titre', 'classe', 'video', 'image', 'duree_en_heure', 'date_debut', 'date_fin', 'status')
@@ -70,6 +87,16 @@ class CoursAdmin(CustomAdmin):
                  ("standard",{"fields":["status"]})
     ]
 
+class FiliereAdmin(CustomAdmin):
+    list_display = ('nom','status')
+    list_display_links = ['nom',]
+    search_fields = ('nom',)
+    ordering = ('nom',)
+    fieldsets = [
+                 ("info filiere",{"fields":["nom"]}),
+                 ("standard",{"fields":["status"]})
+    ]
+
 
 def _register(model,admin_class):
     admin.site.register(model,admin_class)
@@ -78,8 +105,10 @@ def _register(model,admin_class):
 _register(models.Matiere, MatiereAdmin)
 _register(models.Niveau, NiveauAdmin)
 _register(models.Classe, ClasseAdmin)
+_register(models.ClasseMatiere, ClasseMatiereAdmin)
 _register(models.Chapitre, ChapitreAdmin)
 _register(models.Cours, CoursAdmin)
+_register(models.Filiere, FiliereAdmin)
 
 
 

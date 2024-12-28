@@ -3,12 +3,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index_student"), 
-    # path('payment', views.payment, name='payment'),
-    # path('subscription', views.subscription, name='subscription'), 
-    # path('upgrade', views.upgrade, name='upgrade'),
     path('edit', views.edit, name='edit'),
     path('account_edit', views.account_edit, name='account-edit'),
-    # path('invoice', views.invoice, name='invoice'),
     path('edit_basic', views.edit_basic, name='edit-basic'),
     path('edit_profile', views.edit_profile, name='edit-profile'),
     path('billing', views.billing, name='billing'),

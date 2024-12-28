@@ -15,7 +15,7 @@
                                 <h1 class="h2">Quizzes</h1>
                             </div>
                             <div class="media-right d-flex align-items-center">
-                                <a href="{% url 'instructor-quiz-edit' %}" class="btn btn-success mr-2">Add quiz</a>
+                                <a href="{% url 'instructor-quiz-add' %}" class="btn btn-success mr-2">Add quiz</a>
                                 <div class="dropdown">
                                     <a href="#" data-toggle="dropdown" class="btn btn-white"><i class="material-icons">tune</i></a>
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -41,25 +41,26 @@
 
                         <div class="card-columns">
 
+                            {% for quiz in list_quiz %}
                             <div class="card card-sm">
                                 <div class="card-body media">
                                     <div class="media-left">
-                                        <a href="{% url 'instructor-review-quiz' %}" class="avatar avatar-lg avatar-4by3">
+                                        <a href="{% url 'instructor-review-quiz'  %}" class="avatar avatar-lg avatar-4by3">
                                             <img src="/static/assets/images/vuejs.png" alt="Card image cap" class="avatar-img rounded">
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="card-title mb-0"><a href="{% url 'instructor-review-quiz' %}">Vue.js Deploy Quiz</a></h4>
-                                        <small class="text-muted">25 Completed</small>
+                                        <h4 class="card-title mb-0"><a href="{% url 'instructor-review-quiz'  %}">{{ quiz.titre }}</a></h4>
+                                        <small class="text-muted">{{ quiz.date_add|date:"F j, Y" }}</small>
                                     </div>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <a href="{% url 'instructor-review-quiz' %}" class="btn btn-white btn-sm float-left"><i class="material-icons btn__icon--left">playlist_add_check</i> Review <span class="badge badge-dark ml-2">5</span></a>
-                                    <a href="{% url 'instructor-quiz-edit' %}" class="btn btn-default btn-sm float-right"><i class="material-icons btn__icon--left">edit</i> Edit </a>
+                                    <a href="{% url 'instructor-review-quiz'  %}" class="btn btn-white btn-sm float-left"><i class="material-icons btn__icon--left">playlist_add_check</i> Review <span class="badge badge-dark ml-2">5</span></a>
+                                    <a href="{% url 'instructor-quiz-edit' quiz.slug %}" class="btn btn-default btn-sm float-right"><i class="material-icons btn__icon--left">edit</i> Edit </a>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
-
+                            {% endfor %}
                             <div class="card card-sm">
                                 <div class="card-body media">
                                     <div class="media-left">
@@ -74,7 +75,7 @@
                                 </div>
                                 <div class="card-footer text-center">
                                     <a href="{% url 'instructor-review-quiz' %}" class="btn btn-white btn-sm float-left"><i class="material-icons btn__icon--left">playlist_add_check</i> Review <span class="badge badge-dark ml-2">5</span></a>
-                                    <a href="{% url 'instructor-quiz-edit' %}" class="btn btn-default btn-sm float-right"><i class="material-icons btn__icon--left">edit</i> Edit </a>
+                                    <a href="" class="btn btn-default btn-sm float-right"><i class="material-icons btn__icon--left">edit</i> Edit </a>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -93,7 +94,7 @@
                                 </div>
                                 <div class="card-footer text-center">
                                     <a href="{% url 'instructor-review-quiz' %}" class="btn btn-white btn-sm float-left"><i class="material-icons btn__icon--left">playlist_add_check</i> Review <span class="badge badge-dark ml-2">5</span></a>
-                                    <a href="{% url 'instructor-quiz-edit' %}" class="btn btn-default btn-sm float-right"><i class="material-icons btn__icon--left">edit</i> Edit </a>
+                                    <a href="" class="btn btn-default btn-sm float-right"><i class="material-icons btn__icon--left">edit</i> Edit </a>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

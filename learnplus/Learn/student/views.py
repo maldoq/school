@@ -34,7 +34,7 @@ def index(request):
                                 'forum': forum,
                                 'forum_count': forum_count,
                            }
-                return render(request,'pages/fixed-student-dashboard.html',datas)
+                return render(request,'pages/fixed-student-dashboard.html',datas) 
         except Exception as e:
             print(e)
             print("3")
@@ -190,27 +190,27 @@ def billing(request):
             print("3")
             return redirect("/admin/")
     
-# @login_required(login_url = 'login')
-# def browse_courses(request):
-#     if request.user.is_authenticated:
-#         try:
-#             try:
-#                 print("1")
-#                 if request.user.instructor:
-#                     return redirect('dashboard')
-#             except Exception as e:
-#                 print(e)
-#                 print("2")
-#                 if request.user.student_user:
-#                     cours = school_models.Cours.objects.filter(Q(status=True) & Q(chapitre__classe=request.user.student_user.classe))
-#                     datas = {
-#                                 'all_cours' : all_cours ,
-#                            }
-#                 return render(request,'pages/fixed-student-browse-courses.html',datas)
-#         except Exception as e:
-#             print(e)
-#             print("3")
-#             return redirect("/admin/")
+@login_required(login_url = 'login')
+def browse_courses(request):
+    if request.user.is_authenticated:
+        try:
+            try:
+                print("1")
+                if request.user.instructor:
+                    return redirect('dashboard')
+            except Exception as e:
+                print(e)
+                print("2")
+                if request.user.student_user:
+                    cours = school_models.Cours.objects.filter(Q(status=True) & Q(chapitre__classe=request.user.student_user.classe))
+                    datas = {
+                                'all_cours' : all_cours ,
+                           }
+                return render(request,'pages/fixed-student-browse-courses.html',datas)
+        except Exception as e:
+            print(e)
+            print("3")
+            return redirect("/admin/")
    
 
 @login_required(login_url = 'login')
@@ -693,7 +693,7 @@ def take_course(request, slug):
         except Exception as e:
             print(e)
             print("3")
-            return redirect('my_courses')
+            return redirect('my-courses')
    
 
 @login_required(login_url = 'login')
@@ -859,25 +859,34 @@ def post_forum(request):
 
     
 def post_forum_g(request):
-    titre = request.POST.get("titre")
-    question = request.POST.get("question")
+    answer = request.POST.get("answer")
+    sujet = request.POST.get("sujet")
     val = ""
     try:
-        forum = forum_models.Sujet()
-        forum.titre = titre
-        forum.question = question
-        forum.user = request.user
-        forum.save()
-        val = forum.slug
+        # Retrieve the Sujet instance using the slug
+        sujet = school_models.Sujet.objects.get(id=int(sujet))
+        
+        # Create a new response
+        response = forum_models.Reponse()
+        response.reponse = answer
+        response.sujet = sujet
+        response.user = request.user
+        response.save()
+        
+        val = response.slug
         success = True 
-        message = "Votre sujet a bien été ajouté!"
+        message = "Votre réponse a bien été ajoutée!"
+    except forum_models.Sujet.DoesNotExist:
+        success = False
+        message = "Le sujet n'existe pas."
     except Exception as e:
         print(e)
         success = False
-        message = "une erreur est subvenue lors de la soumission"
+        message = "Une erreur est survenue lors de la soumission."
+    
     data = {
-        "success" : success,
+        "success": success,
         "message": message,
-        "forum": val,
-        }
-    return JsonResponse(data,safe=False)
+        "response": val,
+    }
+    return JsonResponse(data, safe=False)

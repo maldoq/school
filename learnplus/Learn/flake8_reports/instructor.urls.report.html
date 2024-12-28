@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: instructor\urls.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="instructor.urls.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               instructor\urls.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.urls.source.html#l24">
+                  <tt><i>24</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;post_cours&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">post_cours</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;post_cours&#39;</span><span class="p">)</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.urls.source.html#l25">
+                  <tt><i>25</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;delete_chapitre&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">delete_chapitre</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;delete_chapitre&#39;</span><span class="p">)</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.urls.source.html#l26">
+                  <tt><i>26</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;delete_lesson&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">delete_lesson</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;delete_lesson&#39;</span><span class="p">)</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.urls.source.html#l27">
+                  <tt><i>27</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;post_lesson&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">post_lesson</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;post_lesson&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E203:</strong> whitespace before ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.urls.source.html#l24">
+                  <tt><i>24</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;post_cours&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">post_cours</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;post_cours&#39;</span><span class="p">)</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.urls.source.html#l25">
+                  <tt><i>25</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;delete_chapitre&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">delete_chapitre</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;delete_chapitre&#39;</span><span class="p">)</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.urls.source.html#l26">
+                  <tt><i>26</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;delete_lesson&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">delete_lesson</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;delete_lesson&#39;</span><span class="p">)</span> <span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.urls.source.html#l6">
+                  <tt><i>6</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;account_edit&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">account_edit</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;instructor-account-edit&#39;</span><span class="p">),</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.urls.source.html#l9">
+                  <tt><i>9</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;courses&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">courses</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;instructor-courses&#39;</span><span class="p">),</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.urls.source.html#l10">
+                  <tt><i>10</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;matiere/&lt;slug&gt;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">matiere</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;instructor-matiere&#39;</span><span class="p">),</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E501:</strong> line too long (84 > 79 characters)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="instructor.urls.source.html#l13">
+                  <tt><i>13</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;forum_thread/&lt;slug&gt;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">forum_thread</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;instructor-forum-thread&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (86 > 79 characters):</p>
+               
+               <a href="instructor.urls.source.html#l15">
+                  <tt><i>15</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;lesson-edit/&lt;id&gt;/&lt;slug&gt;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">lesson_edit</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;instructor-lesson-edit&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E131">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E131:</strong> continuation line unaligned for hanging indent
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.urls.source.html#l29">
+                  <tt><i>29</i>      <span class="c1">########## post ###############</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.urls.source.html#l29">
+                  <tt><i>29</i>      <span class="c1">########## post ###############</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W292">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W292:</strong> no newline at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.urls.source.html#l34">
+                  <tt><i>34</i> <span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.urls.source.html#l22">
+                  <tt><i>22</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

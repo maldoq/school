@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: chat\consumers.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="chat.consumers.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               chat\consumers.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around operator (in 10 places):</p>
+               
+               <a href="chat.consumers.source.html#l55">
+                  <tt><i>55</i>             <span class="s1">&#39;date_add&#39;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">month</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">second</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l52">
+                  <tt><i>52</i>             <span class="s1">&#39;auteur&#39;</span> <span class="p">:</span> <span class="n">message</span><span class="o">.</span><span class="n">auteur</span><span class="o">.</span><span class="n">username</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l53">
+                  <tt><i>53</i>             <span class="s1">&#39;auteur_image&#39;</span> <span class="p">:</span> <span class="n">image</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l54">
+                  <tt><i>54</i>             <span class="s1">&#39;message&#39;</span> <span class="p">:</span> <span class="n">message</span><span class="o">.</span><span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l55">
+                  <tt><i>55</i>             <span class="s1">&#39;date_add&#39;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">month</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">second</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l60">
+                  <tt><i>60</i>         <span class="s1">&#39;new_message&#39;</span> <span class="p">:</span> <span class="n">new_message</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E222">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E222:</strong> multiple spaces after operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Multiple spaces after operator (in 5 places):</p>
+               
+               <a href="chat.consumers.source.html#l55">
+                  <tt><i>55</i>             <span class="s1">&#39;date_add&#39;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">month</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">second</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l12">
+                  <tt><i>12</i>     <span class="k">def</span> <span class="nf">fetch_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l23">
+                  <tt><i>23</i>     <span class="k">def</span> <span class="nf">new_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l100">
+                  <tt><i>100</i>     <span class="k">def</span> <span class="nf">send_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l21">
+                  <tt><i>21</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l45">
+                  <tt><i>45</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l61">
+                  <tt><i>61</i>         </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l64">
+                  <tt><i>64</i>     <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="chat.consumers.source.html#l103">
+                  <tt><i>103</i>     <span class="k">def</span> <span class="nf">chat_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E501:</strong> line too long (99 > 79 characters)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (99 > 79 characters):</p>
+               
+               <a href="chat.consumers.source.html#l15">
+                  <tt><i>15</i>         <span class="n">messages</span> <span class="o">=</span> <span class="n">Message</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">salon__classe</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">salon</span><span class="p">))</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;date_add&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()[:</span><span class="mi">20</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (225 > 79 characters):</p>
+               
+               <a href="chat.consumers.source.html#l55">
+                  <tt><i>55</i>             <span class="s1">&#39;date_add&#39;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">month</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;-&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">date_add</span><span class="o">.</span><span class="n">second</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l9">
+                  <tt><i>9</i> <span class="k">class</span> <span class="nc">ChatConsumer</span><span class="p">(</span><span class="n">WebsocketConsumer</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l49">
+                  <tt><i>49</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l34">
+                  <tt><i>34</i>             <span class="s1">&#39;command&#39;</span><span class="p">:</span> <span class="s1">&#39;new_message&#39;</span><span class="p">,</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W391">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W391:</strong> blank line at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="chat.consumers.source.html#l109">
+                  <tt><i>109</i> &nbsp;</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

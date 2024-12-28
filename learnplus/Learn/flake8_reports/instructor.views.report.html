@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: instructor\views.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="instructor.views.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               instructor\views.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'quiz.models as quiz_models' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l4">
+                  <tt><i>4</i> <span class="kn">from</span> <span class="nn">quiz</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">quiz_models</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'e' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l936">
+                  <tt><i>936</i>     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  49
+               </span>
+               <strong>E231:</strong> missing whitespace after ':'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="instructor.views.source.html#l30">
+                  <tt><i>30</i>                         <span class="s1">&#39;matiere&#39;</span><span class="p">:</span><span class="n">matiere</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l32">
+                  <tt><i>32</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-dashboard.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l56">
+                  <tt><i>56</i>                 <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-account-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="instructor.views.source.html#l128">
+                  <tt><i>128</i>                         <span class="s1">&#39;matiere&#39;</span><span class="p">:</span><span class="n">matiere</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l130">
+                  <tt><i>130</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-course-add.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="instructor.views.source.html#l155">
+                  <tt><i>155</i>                         <span class="s1">&#39;matiere&#39;</span><span class="p">:</span><span class="n">matiere</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="instructor.views.source.html#l156">
+                  <tt><i>156</i>                         <span class="s1">&#39;chapitre&#39;</span><span class="p">:</span><span class="n">chapitre</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l158">
+                  <tt><i>158</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-course-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l184">
+                  <tt><i>184</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-courses.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l210">
+                  <tt><i>210</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-cours-chap.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l233">
+                  <tt><i>233</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-account-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l286">
+                  <tt><i>286</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-forum.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l311">
+                  <tt><i>311</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-forum-ask.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l337">
+                  <tt><i>337</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-forum-thread.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l415">
+                  <tt><i>415</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-lesson-add.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l442">
+                  <tt><i>442</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-lesson-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l474">
+                  <tt><i>474</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-messages.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l550">
+                  <tt><i>550</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-profile.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l575">
+                  <tt><i>575</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-quiz-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l599">
+                  <tt><i>599</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-quiz-add.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l649">
+                  <tt><i>649</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-quizzes.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l674">
+                  <tt><i>674</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-review-quiz.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l776">
+                  <tt><i>776</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-statement.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l850">
+                  <tt><i>850</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l870">
+                  <tt><i>870</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l924">
+                  <tt><i>924</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l943">
+                  <tt><i>943</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l977">
+                  <tt><i>977</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l1010">
+                  <tt><i>1010</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="instructor.views.source.html#l1036">
+                  <tt><i>1036</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  38
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l16">
+                  <tt><i>16</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l41">
+                  <tt><i>41</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l113">
+                  <tt><i>113</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l138">
+                  <tt><i>138</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l168">
+                  <tt><i>168</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l194">
+                  <tt><i>194</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l218">
+                  <tt><i>218</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l268">
+                  <tt><i>268</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l296">
+                  <tt><i>296</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l321">
+                  <tt><i>321</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l399">
+                  <tt><i>399</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l423">
+                  <tt><i>423</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l452">
+                  <tt><i>452</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l535">
+                  <tt><i>535</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l560">
+                  <tt><i>560</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l584">
+                  <tt><i>584</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l634">
+                  <tt><i>634</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l659">
+                  <tt><i>659</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="instructor.views.source.html#l761">
+                  <tt><i>761</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  36
+               </span>
+               <strong>E501:</strong> line too long (82 > 79 characters)
+               
+                  (and 14 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l32">
+                  <tt><i>32</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-dashboard.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l56">
+                  <tt><i>56</i>                 <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-account-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l80">
+                  <tt><i>80</i> <span class="c1">#                 return render(request,&#39;pages/instructor-browse-courses.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l130">
+                  <tt><i>130</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-course-add.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l158">
+                  <tt><i>158</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-course-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (127 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l180">
+                  <tt><i>180</i>                     <span class="n">Chapitre</span> <span class="o">=</span> <span class="n">school_models</span><span class="o">.</span><span class="n">Chapitre</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">classe</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l184">
+                  <tt><i>184</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-courses.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (151 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l206">
+                  <tt><i>206</i>                     <span class="n">Chapitre</span> <span class="o">=</span> <span class="n">school_models</span><span class="o">.</span><span class="n">Chapitre</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">classe</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">matiere__slug</span><span class="o">=</span><span class="n">slug</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l210">
+                  <tt><i>210</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-cours-chap.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l233">
+                  <tt><i>233</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-account-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (87 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l258">
+                  <tt><i>258</i> <span class="c1">#                     return render(request,&#39;pages/instructor-edit-invoice.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l280">
+                  <tt><i>280</i>                     <span class="n">forum_general</span> <span class="o">=</span> <span class="n">forum_models</span><span class="o">.</span><span class="n">Sujet</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">cours</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (117 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l281">
+                  <tt><i>281</i>                     <span class="n">forum</span> <span class="o">=</span> <span class="n">forum_models</span><span class="o">.</span><span class="n">Sujet</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">cours__chapitre__classe</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l311">
+                  <tt><i>311</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-forum-ask.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l337">
+                  <tt><i>337</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-forum-thread.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l362">
+                  <tt><i>362</i> <span class="c1">#                     return render(request,&#39;pages/instructor-invoice.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l388">
+                  <tt><i>388</i> <span class="c1">#                     return render(request,&#39;pages/instructor-invoice-settings.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l415">
+                  <tt><i>415</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-lesson-add.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l442">
+                  <tt><i>442</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-lesson-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (103 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l464">
+                  <tt><i>464</i>                     <span class="n">exist_classe</span> <span class="o">=</span> <span class="n">chat_models</span><span class="o">.</span><span class="n">Salon</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">classe</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (97 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l465">
+                  <tt><i>465</i>                     <span class="n">info</span> <span class="o">=</span> <span class="n">school_models</span><span class="o">.</span><span class="n">Classe</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l472">
+                  <tt><i>472</i>                         <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="n">mark_safe</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">))</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l474">
+                  <tt><i>474</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-messages.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l499">
+                  <tt><i>499</i> <span class="c1">#                     return render(request,&#39;pages/instructor-messages-2.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l525">
+                  <tt><i>525</i> <span class="c1">#                     return render(request,&#39;pages/instructor-my-courses.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l550">
+                  <tt><i>550</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-profile.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l575">
+                  <tt><i>575</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-quiz-edit.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l599">
+                  <tt><i>599</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-quiz-add.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (87 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l624">
+                  <tt><i>624</i> <span class="c1">#                     return render(request,&#39;pages/instructor-quiz-results.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l649">
+                  <tt><i>649</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-quizzes.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l674">
+                  <tt><i>674</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-review-quiz.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (86 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l699">
+                  <tt><i>699</i> <span class="c1">#                     return render(request,&#39;pages/instructor-take-course.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l725">
+                  <tt><i>725</i> <span class="c1">#                     return render(request,&#39;pages/instructor-take-quiz.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (86 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l751">
+                  <tt><i>751</i> <span class="c1">#                     return render(request,&#39;pages/instructor-view-course.html&#39;,datas)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l776">
+                  <tt><i>776</i>                     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/instructor-statement.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (94 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l884">
+                  <tt><i>884</i>         <span class="n">cours</span> <span class="o">=</span> <span class="n">school_models</span><span class="o">.</span><span class="n">Cours</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">chapitre__id</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">chapitre</span><span class="p">)))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  32
+               </span>
+               <strong>E303:</strong> too many blank lines (4)
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l41">
+                  <tt><i>41</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l65">
+                  <tt><i>65</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l89">
+                  <tt><i>89</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l113">
+                  <tt><i>113</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l138">
+                  <tt><i>138</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l168">
+                  <tt><i>168</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l194">
+                  <tt><i>194</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l218">
+                  <tt><i>218</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l243">
+                  <tt><i>243</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l268">
+                  <tt><i>268</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l296">
+                  <tt><i>296</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l321">
+                  <tt><i>321</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l347">
+                  <tt><i>347</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="instructor.views.source.html#l373">
+                  <tt><i>373</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="instructor.views.source.html#l399">
+                  <tt><i>399</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l423">
+                  <tt><i>423</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l452">
+                  <tt><i>452</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l484">
+                  <tt><i>484</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="instructor.views.source.html#l510">
+                  <tt><i>510</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="instructor.views.source.html#l535">
+                  <tt><i>535</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l560">
+                  <tt><i>560</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l584">
+                  <tt><i>584</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l609">
+                  <tt><i>609</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l634">
+                  <tt><i>634</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l659">
+                  <tt><i>659</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l684">
+                  <tt><i>684</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="instructor.views.source.html#l710">
+                  <tt><i>710</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="instructor.views.source.html#l736">
+                  <tt><i>736</i> <span class="c1"># @login_required(login_url = &#39;login&#39;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l761">
+                  <tt><i>761</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l854">
+                  <tt><i>854</i> <span class="sd">&quot;&quot;&quot; delete chapitre&quot;&quot;&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="instructor.views.source.html#l876">
+                  <tt><i>876</i> <span class="sd">&quot;&quot;&quot; add and update lesson &quot;&quot;&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l928">
+                  <tt><i>928</i> <span class="sd">&quot;&quot;&quot; delete lesson&quot;&quot;&quot;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  19
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Whitespace before ',':</p>
+               
+               <a href="instructor.views.source.html#l182">
+                  <tt><i>182</i>                             <span class="s1">&#39;Chapitre&#39;</span> <span class="p">:</span> <span class="n">Chapitre</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l182">
+                  <tt><i>182</i>                             <span class="s1">&#39;Chapitre&#39;</span> <span class="p">:</span> <span class="n">Chapitre</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ',':</p>
+               
+               <a href="instructor.views.source.html#l208">
+                  <tt><i>208</i>                             <span class="s1">&#39;Chapitre&#39;</span> <span class="p">:</span> <span class="n">Chapitre</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l208">
+                  <tt><i>208</i>                             <span class="s1">&#39;Chapitre&#39;</span> <span class="p">:</span> <span class="n">Chapitre</span> <span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l810">
+                  <tt><i>810</i>         <span class="k">except</span> <span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l832">
+                  <tt><i>832</i>         <span class="k">except</span> <span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l846">
+                  <tt><i>846</i>         <span class="s1">&#39;success&#39;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l847">
+                  <tt><i>847</i>         <span class="s1">&#39;message&#39;</span> <span class="p">:</span> <span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l867">
+                  <tt><i>867</i>         <span class="s1">&#39;success&#39;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l868">
+                  <tt><i>868</i>         <span class="s1">&#39;message&#39;</span> <span class="p">:</span> <span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l921">
+                  <tt><i>921</i>         <span class="s1">&#39;success&#39;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l922">
+                  <tt><i>922</i>         <span class="s1">&#39;message&#39;</span> <span class="p">:</span> <span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l940">
+                  <tt><i>940</i>         <span class="s1">&#39;success&#39;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l941">
+                  <tt><i>941</i>         <span class="s1">&#39;message&#39;</span> <span class="p">:</span> <span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l974">
+                  <tt><i>974</i>         <span class="s2">&quot;success&quot;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l975">
+                  <tt><i>975</i>         <span class="s2">&quot;message&quot;</span> <span class="p">:</span> <span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l1007">
+                  <tt><i>1007</i>         <span class="s2">&quot;success&quot;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l1008">
+                  <tt><i>1008</i>         <span class="s2">&quot;message&quot;</span> <span class="p">:</span> <span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Whitespace before ':':</p>
+               
+               <a href="instructor.views.source.html#l1032">
+                  <tt><i>1032</i>         <span class="s2">&quot;success&quot;</span> <span class="p">:</span> <span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l10">
+                  <tt><i>10</i> <span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">JsonResponse</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l120">
+                  <tt><i>120</i>                     <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index_student&#39;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l175">
+                  <tt><i>175</i>                     <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index_student&#39;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l466">
+                  <tt><i>466</i>                     <span class="n">user_room</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>                    </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l786">
+                  <tt><i>786</i>     <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l822">
+                  <tt><i>822</i>         <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l843">
+                  <tt><i>843</i>         <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l898">
+                  <tt><i>898</i>         <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l914">
+                  <tt><i>914</i>             <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l962">
+                  <tt><i>962</i>             <span class="n">instructor</span><span class="o">.</span><span class="n">photo</span> <span class="o">=</span> <span class="n">image</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l967">
+                  <tt><i>967</i>         <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l1000">
+                  <tt><i>1000</i>             <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l1025">
+                  <tt><i>1025</i>         <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l37">
+                  <tt><i>37</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l38">
+                  <tt><i>38</i>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l61">
+                  <tt><i>61</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l85">
+                  <tt><i>85</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l109">
+                  <tt><i>109</i>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l291">
+                  <tt><i>291</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l316">
+                  <tt><i>316</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l367">
+                  <tt><i>367</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l393">
+                  <tt><i>393</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l479">
+                  <tt><i>479</i>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l529">
+                  <tt><i>529</i>   </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l629">
+                  <tt><i>629</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l979">
+                  <tt><i>979</i>         </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  9
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l810">
+                  <tt><i>810</i>         <span class="k">except</span> <span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l815">
+                  <tt><i>815</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l820">
+                  <tt><i>820</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l824">
+                  <tt><i>824</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l832">
+                  <tt><i>832</i>         <span class="k">except</span> <span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l893">
+                  <tt><i>893</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l900">
+                  <tt><i>900</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l965">
+                  <tt><i>965</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l970">
+                  <tt><i>970</i>     <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  7
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l16">
+                  <tt><i>16</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="instructor.views.source.html#l785">
+                  <tt><i>785</i> <span class="k">def</span> <span class="nf">post_cours</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="instructor.views.source.html#l855">
+                  <tt><i>855</i> <span class="k">def</span> <span class="nf">delete_chapitre</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="instructor.views.source.html#l877">
+                  <tt><i>877</i> <span class="k">def</span> <span class="nf">post_lesson</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="instructor.views.source.html#l929">
+                  <tt><i>929</i> <span class="k">def</span> <span class="nf">delete_lesson</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l945">
+                  <tt><i>945</i> <span class="k">def</span> <span class="nf">update_profil</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l1014">
+                  <tt><i>1014</i> <span class="k">def</span> <span class="nf">post_forum</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E305">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E305:</strong> expected 2 blank lines after class or function definition, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l784">
+                  <tt><i>784</i> <span class="sd">&quot;&quot;&quot; Add and update chapitre &quot;&quot;&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l1012">
+                  <tt><i>1012</i> <span class="sd">&quot;&quot;&quot;  Post forum &quot;&quot;&quot;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
